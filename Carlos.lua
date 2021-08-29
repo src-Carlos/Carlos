@@ -609,7 +609,7 @@ function IdRank(user_id,chat_id)
 if tonumber(user_id) == tonumber(1607997334) then 
 CarlosTeam = 'مبرمج السورس' 
 elseif tonumber(user_id) == tonumber(119541395) then
-CarlosTeam = 'مبرمج السورس' 
+CarlosTeam = 'Dev Main' 
 elseif tonumber(user_id) == tonumber(Carlos) then 
 CarlosTeam = 'البوت' elseif SudoId(user_id) then 
 CarlosTeam = 'المطور الاساسي' 
