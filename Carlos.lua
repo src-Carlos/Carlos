@@ -1811,8 +1811,8 @@ if SecondSudo(msg) then
 local Sudo_Welcome = '⚙️┇اهلا بك مجددا عزيزي المطور \n⚙️┇اليك الازرار الخاصه بتحديث  سورس كارلوس فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ تحديث السورس ⚙️','↫ تحديث ⚙️'},
-{'↫ السيرفر ⚙️'},
-{'↫ مبرمج السورس ⚙️','↫ قناة السورس ⚙️'},
+{'↫ مبرمج السورس ⚙️','↫ السيرفر ⚙️'},
+{'↫ قناة التحديثات ⚙️','↫ قناة السورس ⚙️'},
 {'↫  السورس ⚙️'},
 {'↫ رجوع ⚙️'},
 }
@@ -11431,6 +11431,19 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TTTTZTTP&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+--     Source Carlos     --
+if text == 'التحديثات' and SourceCh(msg) or text == 'قناة التحديثات' and SourceCh(msg) or text == 'قناه التحديثات' and SourceCh(msg) or text == 'قنات التحديثات' and SourceCh(msg) or text == '↫ قناة التحديثات ⚙️' and SourceCh(msg) then 
+Text = [[
+⚙️┇[شاهدو التحديثات](https://t.me/TTTZTTT200)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '⚙️ قناة التحديثات',url="t.me/TTTZTTT200"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/TTTZTTT200&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source Carlos     --
